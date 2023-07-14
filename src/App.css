@@ -1,0 +1,28 @@
+
+.auth__form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.auth__form form {
+  border-radius: 12pt;
+  border: 1px solid #181414;
+  padding: 20pt 40pt 30pt;
+  width: 20%;
+}
+
+.auth__form form input {
+  height: 20px;
+  margin-top: 7pt;
+  width: 100%;
+}
+
+.root {
+  background-color: #232222;
+  height: 100vh;
+}
+
+li {
+  cursor: pointer;
+}
