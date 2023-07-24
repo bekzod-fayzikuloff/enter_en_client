@@ -25,3 +25,7 @@
 li {
   cursor: pointer;
 }
+
+.list-group-item {
+  border-radius: 0;
+}

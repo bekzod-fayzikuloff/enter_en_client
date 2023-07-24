@@ -7,6 +7,7 @@ import {LoginPage} from "./pages/LoginPage";
 import {ReportsPage} from "./pages/ReportsPage";
 import {StudentsReportsPage} from "./pages/StudentsReportsPage";
 import {GroupsReportsPage} from "./pages/GroupsReportsPage";
+import {MainLayout} from "./common/layouts/Main";
 
 function App() {
 
@@ -15,10 +16,12 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<PrivateRoute />}>
-            <Route index element={<ReportsPage />} />
-            <Route path={"/students"} element={<StudentsReportsPage />} />
-            <Route path={"/groups"} element={<GroupsReportsPage />} />
-            <Route path="*" element={<h1>404</h1>} />
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<ReportsPage />} />
+              <Route path={"/students"} element={<StudentsReportsPage />} />
+              <Route path={"/groups"} element={<GroupsReportsPage />} />
+              <Route path="*" element={<h1>404</h1>} />
+            </Route>
           </Route>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
